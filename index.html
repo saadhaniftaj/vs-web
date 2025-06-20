@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Vanguard Solutions | Cloud & AI Transformation</title>
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,700,900&display=swap" rel="stylesheet">
+    <style>
+    :root {
+      --spotify-black: #191414;
+      --spotify-dark: #121212;
+      --spotify-green: #1db954;
+      --spotify-light: #fff;
+      --spotify-grey: #b3b3b3;
+      --spotify-card: #232323;
+      --spotify-card-hover: #25292e;
+        }
+    html {scroll-behavior:smooth;}
+        body {
+      font-family: 'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+      margin:0; background: var(--spotify-black); color: var(--spotify-light);
+      min-height:100vh;
+            overflow-x: hidden;
+    }
+    /* Background Glow */
+    body::before {
+      content:""; position:fixed; z-index:0; left:0; top:0; width:100vw; height:100vh;
+      background: radial-gradient(ellipse 700px 400px at 15% 15%, #1db95433 0%,transparent 70%), radial-gradient(ellipse 700px 400px at 90% 80%, #1db95444 0%,transparent 66%);
+      pointer-events:none;
+      opacity: 0.65;
+        }
+
+    /* NAVBAR */
+        nav {
+      position:fixed; top:0; left:0; width:100%; z-index:100;
+      height:62px; background:var(--spotify-black);
+      display:flex; align-items: center; box-shadow:0 1px 0 #1112;
+      border-bottom: 1px solid #232323;
+        }
+    .nav-content { width:100%; max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:0 2rem;}
+        .logo {
+      display: flex; align-items: center; font-weight:900; font-size:1.3rem; letter-spacing: -.03em;
+      color: var(--spotify-green);
+      text-decoration: none;
+        }
+    .logo img { height:38px; width:38px; margin-right:10px; border-radius: 8px; box-shadow:0 0 12px #1db95411;}
+    .nav-links{display: flex; gap:2rem;}
+        .nav-links a {
+      color:var(--spotify-grey); text-decoration:none; font-weight:600; font-size:1rem;
+      padding:6px 3px; border-radius:3px; transition:color 0.17s, background 0.18s;
+        }
+    .nav-links a:hover, .nav-links a.active {
+      color:var(--spotify-light); background:rgba(29,185,84,0.13);
+        }
+    .nav-cta {
+      margin-left:1.7rem;
+      background: var(--spotify-green);
+      color:var(--spotify-dark); font-weight:900; border:none; border-radius:26px;
+      padding:.8em 2.1em;
+      font-size:1.06rem; letter-spacing:.02em;
+      cursor:pointer; box-shadow:0 4px 20px #1db95426;
+      transition: background 0.22s, color 0.18s, transform 0.16s;
+        }
+    .nav-cta:hover {
+      background: var(--spotify-light); color:var(--spotify-green); transform:scale(1.05);
+    }
+
+    /* General CTA Button Style */
+    .cta-button {
+        display:inline-block; 
+        background: var(--spotify-green);
+        color:var(--spotify-black);
+        font-weight:800; 
+        font-size:1.12rem;
+        border-radius:50px; 
+        padding:1em 2.6em; 
+        border:none; 
+        cursor:pointer;
+        box-shadow:0 6px 26px #1db95425, 0 2px 8px #19141419;
+        transition: background 0.19s, color 0.19s, transform 0.15s;
+        text-decoration: none;
+    }
+
+    .cta-button:hover {
+        background:var(--spotify-light); 
+        color:var(--spotify-green); 
+        transform:scale(1.04) translateY(-2px);
+    }
+
+    /* HERO */
+        .hero {
+      min-height: 98vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
+      text-align:center;
+      z-index:1; position: relative;
+      padding-top: 90px;
+      background: transparent;
+        }
+        .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      background: linear-gradient(92deg, #1DB954 10%, #39ff8e 40%, #f8f9fa 70%, #1DB954 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+      color: #1DB954; /* fallback */
+      font-weight: 900;
+      animation: textGlow 2s infinite alternate;
+      letter-spacing: -1.2px;
+      line-height:1.09;
+      margin-bottom:1.6rem;
+      text-shadow: 0 2px 16px #1db95455, 0 1px 0 #fff;
+        }
+        .hero p {
+      color:var(--spotify-grey); max-width:580px; font-size:1.22rem;
+      line-height:1.7; margin:0 auto 2.7rem;
+        }
+    .hero .cta-button {
+      margin-top:.7rem;
+    }
+
+    /* GENERIC SECTION */
+    section { padding: 5.5rem 0 3rem;}
+    .container { max-width:1100px; margin:0 auto; padding:0 1.5rem; position:relative; z-index:1;}
+        .section-title {
+      text-align:center; font-size:2rem; letter-spacing:-1px;
+      margin-bottom:2.1rem; font-weight:800; color:var(--spotify-light);
+        }
+
+    /* CARD GRIDS */
+    .cards-grid {
+      display:grid; grid-template-columns: repeat(auto-fit, minmax(310px,1fr)); gap:2rem;
+      margin-top:.6rem;
+        }
+    .card {
+      background: var(--spotify-card);
+      border-radius:20px;
+      box-shadow:0 3px 38px #1db9541a, 0 1.5px 8px #12121210;
+      padding:2.2rem 1.5rem; transition:box-shadow .2s, background .18s, transform .16s;
+      border:1px solid #222;
+      min-height:175px; position:relative; overflow:hidden;
+      filter:drop-shadow(0 1px 2px #19141409);
+    }
+    .card:hover {
+      background:var(--spotify-card-hover);
+      box-shadow:0 6px 40px #1db95437, 0 2.5px 24px #12121215;
+      transform:translateY(-7px) scale(1.017);
+    }
+    .card .emoji { font-size:2.2rem; margin-bottom:1.2rem;}
+    .card h3 { font-weight:700; color:var(--spotify-light); margin-bottom:.62rem; font-size:1.18rem;}
+    .card p { color:#cfcfcf; font-size:1.04rem; line-height:1.56;}
+
+    /* Portfolio tweaks */
+    .portfolio-grid .card h4 {color:var(--spotify-green);font-size:1.08rem;margin-bottom:0.4rem;}
+    .portfolio-grid .card p{font-size:1.01rem;color: #ececec;}
+
+        /* Testimonials */
+    .testimonials-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(310px,1fr)); gap:2rem; margin-top:2.2rem;}
+    .testimonial-card {
+      background: #181818;
+      border-radius:19px;
+      box-shadow: 0 8px 32px #1db95415;
+      padding:2rem 1.3rem 1.27rem;text-align:center; border:1px solid #232323; position:relative;
+        }
+    .testimonial-card:after{ content:'"'; color:#1db95433; font-size:5rem;
+      position:absolute; left:1.7rem; top:0.9rem; opacity:0.19; pointer-events:none;}
+    .testimonial-card .testimonial-text { font-style:italic; color:#d6d6d6; margin-bottom:1.13rem; font-size:1.13rem;}
+    .testimonial-card .testimonial-author { font-weight:700; color: var(--spotify-green);}
+    .testimonial-card .stars { color:var(--spotify-green); font-size:1.22rem;}
+    
+    /* Contact */
+    .contact-section .container { max-width:640px;}
+    .contact-cta {color:var(--spotify-light); font-size:1.12rem; text-align:center; margin-bottom:2.1rem;}
+    .contact-actions { text-align:center;}
+    .contact-actions .cta-button {margin-top:0.5rem;}
+
+    /* FOOTER */
+        footer {
+      background:var(--spotify-black); color:var(--spotify-grey); 
+      text-align:center; padding:2.3rem 0 1.3rem;
+      margin-top:2.4rem; border-top: 3px solid #1db954;
+        }
+    .footer-columns {
+      display:flex; flex-wrap:wrap; justify-content:center; gap:2.3rem 6vw;margin-bottom:1.3rem;
+    }
+    .footer-section h4 { color:var(--spotify-green); margin-bottom:.6rem; font-size:1.06rem; }
+    .footer-section a { color:var(--spotify-green); text-decoration:none; transition:color 0.15s;}
+    .footer-section a:hover {color: var(--spotify-light);}
+    .footer-credit { color:#92a4c7; font-size:.99rem; margin-top:1.9rem;}
+    .footer-logo {height:45px; margin:10px auto 3px; opacity:.97;}
+
+    /* Mobile */
+    @media (max-width:820px){
+      .nav-content {padding:0 1rem;}
+      .cards-grid,.testimonials-grid {grid-template-columns:1fr;}
+    }
+    @media (max-width:620px){
+      nav{height:58px;}
+      .nav-content{flex-direction:column;gap:0.32rem;}
+      .hero{padding-top:76px;}
+      .section-title{font-size:1.27rem;}
+      .logo img{height:31px;width:31px;}
+      .footer-columns {gap:1.2rem 3vw; font-size:.97rem;}
+        }
+
+    /* Animated BG Particles */
+    .bg-animation { position: fixed; z-index: -1; top: 0; left: 0; width:100vw; height:100vh; pointer-events:none; }
+    .particle { position: absolute; width: 3px; height: 3px; border-radius: 50%; opacity: 0.95; animation: float 14s linear infinite; background: #1DB954; }
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+                opacity: 0;
+            }
+      10% {
+                opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-110vh);
+        opacity: 0;
+      }
+    }
+    @keyframes textGlow {
+      0% { filter:brightness(1);}
+      100% { filter:brightness(1.2) drop-shadow(0 0 20px #1db95499);}
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation" id="bgParticles"></div>
+    <nav>
+    <div class="nav-content">
+      <a class="logo" href="#home">
+        <img src="https://placehold.co/40x40/191414/1db954?text=VS" alt="Vanguard Logo"/>
+        Vanguard Solutions
+      </a>
+      <div class="nav-links">
+        <a href="#home" class="active">Home</a>
+        <a href="#services">Offerings</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+            </div>
+      <a href="#contact" class="nav-cta">Get Free Demo</a>
+        </div>
+    </nav>
+
+  <!-- HERO SECTION -->
+    <section id="home" class="hero">
+    <h1>
+      Transform Your Business<br> with AI & Cloud Computing
+    </h1>
+    <p>
+        We help you overcome complex operational challenges by integrating advanced AI into your existing systems—manual or automated—to enhance speed, intelligence, and cost-efficiency.
+    </p>
+    <a href="mailto:contact@vanguardsolutions.cloud" class="cta-button">Get Free Demo Today</a>
+    </section>
+
+  <!-- SERVICES/OFFERINGS -->
+  <section id="services">
+        <div class="container">
+      <h2 class="section-title">Tailored Solutions for Your Business</h2>
+      <div class="cards-grid">
+        <div class="card"><div class="emoji">🤙</div><h3>AI Receptionist</h3><p>Let an AI-powered receptionist answer calls, record client data, and book appointments just like a real person—for dentists, doctors, detailing centers, restaurants, and more.</p></div>
+        <div class="card"><div class="emoji">🤖</div><h3>AI Integration for Websites</h3><p>Add chatbots, recommendation engines, and workflow automation to your website—<br><b>no rebuild required</b>.</p></div>
+        <div class="card"><div class="emoji">📄</div><h3>Document Processing & OCR</h3><p>Automatically turn PDFs and images into data using Azure AI Document Intelligence.</p></div>
+        <div class="card"><div class="emoji">💡</div><h3>Custom AI Solutions</h3><p>Describe your challenge in plain English—we'll build a solution that fits your needs & budget.</p></div>
+        <div class="card"><div class="emoji">🎤</div><h3>Voice-to-Text Solutions</h3><p>Turn voice notes into accurate, timestamped transcripts using advanced models.</p></div>
+        <div class="card"><div class="emoji">⚡</div><h3>Workflow Automations</h3><p>Say goodbye to repetitive manual tasks with automated, error-reducing processes.</p></div>
+        <div class="card"><div class="emoji">☁️</div><h3>Cloud Migration & Support</h3><p>Move to the cloud with confidence, backed by ongoing Vanguard technical support.</p></div>
+            </div>
+        </div>
+    </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+        <div class="container">
+      <h2 class="section-title">Recent Success Stories</h2>
+      <div class="cards-grid portfolio-grid">
+        <div class="card">
+          <h4>AI Chatbots for Existing Sites</h4>
+          <p>Added Gen AI bots and API connections to client workflows, boosting engagement by 60%—no system rebuild needed.</p>
+                </div>
+        <div class="card">
+          <h4>Document Processing – Nissi Distribution</h4>
+          <p>Automated scanning & extraction of 1,500+ shipment docs per day, converting PDFs to Excel, speeding up ops drastically.</p>
+                </div>
+        <div class="card">
+          <h4>Voice Transcription – Moroccan Company</h4>
+          <p>Built AWS+NVIDIA solution for accurate, timestamped transcripts, improving communication and workflow efficiency.</p>
+        </div>
+        <div class="card">
+          <h4>Automation for Multiple Firms</h4>
+          <p>Custom automations eliminated manual workloads and errors, cutting processing time by up to 70%.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-text">After this project, I now want to use Azure for other projects so Saad can produce another masterpiece for me. Prompt, good value, quality customer service, high level.</div>
+          <div class="testimonial-author">— Austin Hill, Nissi Distribution</div>
+          <div class="stars">★★★★★</div>
+                </div>
+        <div class="testimonial-card">
+          <div class="testimonial-text">Quick and thorough in response. Great to work with! Excellent documentation. Quality of delivery and value—everything was perfect.</div>
+          <div class="testimonial-author">— William Wong, Fiverr Pro Product Owner</div>
+          <div class="stars">★★★★★</div>
+                </div>
+        <div class="testimonial-card">
+          <div class="testimonial-text">Vanguard Solutions made our complex automation simple. Their affordable pricing and ongoing tech support exceeded our expectations.</div>
+          <div class="testimonial-author">— Sarah M., Operations Manager</div>
+          <div class="stars">★★★★★</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Let's Start Your Transformation</h2>
+      <div class="contact-cta">
+        Ready to make your business more efficient? Tell us your challenge in simple words—<b>we'll handle the tech</b> and deliver fast, affordable solutions with ongoing support.
+      </div>
+      <div class="contact-actions">
+        <a href="mailto:contact@vanguardsolutions.cloud" class="cta-button">Let's Do This!</a>
+            </div>
+        </div>
+    </section>
+
+  <!-- FOOTER -->
+    <footer>
+        <div class="container">
+      <div class="footer-columns">
+        <div class="footer-section">
+                    <h4>Contact Info</h4>
+          <p>Email: <a href="mailto:contact@vanguardsolutions.cloud" style="color:var(--main-light)">contact@vanguardsolutions.cloud</a></p>
+          <p style="margin-top:.7em;">Fast • Efficient • Affordable</p>
+          <div>Ongoing Tech Support Included</div>
+        </div>
+        <div class="footer-section">
+          <h4>Socials</h4>
+          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+            </div>
+      <div>
+        <img src="https://placehold.co/120x44/191414/1db954?text=VS" class="footer-logo" alt="Vanguard Solutions Logo"/>
+        <div class="footer-credit">&copy; 2025 Vanguard Solutions. All rights reserved.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    // Dynamic BG particles
+    const $bg=document.getElementById('bgParticles'); 
+    // Tiny green particles
+    for(let i=0;i<300;i++){
+      const d = document.createElement('div');
+      d.className='particle';
+      d.style.left=Math.random()*100+'vw';
+      d.style.top=Math.random()*100+'vh';
+      d.style.animationDuration=(7+Math.random()*10)+'s';
+      d.style.opacity = Math.random() * 0.3 + 0.7;
+      $bg.appendChild(d);
+        }
+    </script>
+</body>
+</html>
