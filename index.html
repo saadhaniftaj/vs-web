@@ -1,419 +1,1530 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Vanguard Solutions | AI & Cloud Computing Services | Transform Your Business</title>
-  
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Vanguard Solutions delivers fast, affordable AI-powered solutions for businesses. Specializing in AI integration, document processing, workflow automation, and cloud migration. Transform your business with our expert AI consulting services.">
-  <meta name="keywords" content="AI consulting, cloud computing, business automation, AI integration, document processing, workflow automation, Azure AI, machine learning, business transformation, AI solutions, cloud migration, AI receptionist, voice transcription">
+  <title>Vanguard Solutions | AI & Cloud Computing Services</title>
+  <meta name="description"
+    content="Vanguard Solutions delivers fast, affordable AI-powered solutions. Specializing in AI integration, document processing, workflow automation, voice AI, and cloud migration.">
+  <meta name="keywords"
+    content="AI agency, cloud computing, business automation, AI integration, document processing, workflow automation, Azure AI, AWS Bedrock, machine learning, AI solutions, cloud migration, AI receptionist, voice transcription">
   <meta name="author" content="Vanguard Solutions">
   <meta name="robots" content="index, follow">
-  
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.vanguardsolutions.cloud/">
   <meta property="og:title" content="Vanguard Solutions | AI & Cloud Computing Services">
-  <meta property="og:description" content="Transform your business with AI-powered solutions. Fast, affordable, and efficient AI integration, automation, and cloud services.">
-  <meta property="og:image" content="https://www.vanguardsolutions.cloud/logo.png">
-  
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://www.vanguardsolutions.cloud/">
-  <meta property="twitter:title" content="Vanguard Solutions | AI & Cloud Computing Services">
-  <meta property="twitter:description" content="Transform your business with AI-powered solutions. Fast, affordable, and efficient AI integration, automation, and cloud services.">
-  <meta property="twitter:image" content="https://www.vanguardsolutions.cloud/logo.png">
-  
-  <!-- Business Schema Markup -->
+  <meta property="og:description"
+    content="Transform your business with AI-powered solutions. Fast, affordable, and efficient AI integration, automation, and cloud services.">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Vanguard Solutions",
     "url": "https://www.vanguardsolutions.cloud",
-    "logo": "https://www.vanguardsolutions.cloud/logo.png",
     "description": "AI and cloud computing services for business transformation",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "US"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "customer service",
-      "email": "contact@vanguardsolutions.cloud"
-    },
-    "sameAs": [
-      "https://github.com/saadhaniftaj"
-    ]
+    "contactPoint": {"@type": "ContactPoint","contactType": "customer service","email": "contact@vanguardsolutions.cloud"},
+    "sameAs": ["https://www.linkedin.com/company/110533088","https://github.com/saadhaniftaj"]
   }
   </script>
-  
-  <link href="https://fonts.googleapis.com/css?family=Inter:400,700,900&display=swap" rel="stylesheet">
-    <style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <style>
     :root {
-      --spotify-black: #191414;
-      --spotify-dark: #121212;
-      --spotify-green: #1db954;
-      --spotify-light: #fff;
-      --spotify-grey: #b3b3b3;
-      --spotify-card: #232323;
-      --spotify-card-hover: #25292e;
-        }
-    html {scroll-behavior:smooth;}
-        body {
-      font-family: 'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
-      margin:0; background: var(--spotify-black); color: var(--spotify-light);
-      min-height:100vh;
-            overflow-x: hidden;
+      --black: #0d0d0d;
+      --dark: #111111;
+      --card: #181818;
+      --card-hover: #1e1e1e;
+      --green: #1db954;
+      --green-dim: #1db95422;
+      --green-glow: #1db95455;
+      --light: #f5f5f5;
+      --grey: #a0a0a0;
+      --border: #252525;
     }
-    /* Background Glow */
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--black);
+      color: var(--light);
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
     body::before {
-      content:""; position:fixed; z-index:0; left:0; top:0; width:100vw; height:100vh;
-      background: radial-gradient(ellipse 700px 400px at 15% 15%, #1db95433 0%,transparent 70%), radial-gradient(ellipse 700px 400px at 90% 80%, #1db95444 0%,transparent 66%);
-      pointer-events:none;
-      opacity: 0.65;
-        }
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse 800px 500px at 10% 10%, #1db95420 0%, transparent 70%),
+        radial-gradient(ellipse 600px 400px at 90% 85%, #1db95428 0%, transparent 65%);
+      pointer-events: none;
+    }
 
-    /* NAVBAR */
-        nav {
-      position:fixed; top:0; left:0; width:100%; z-index:100;
-      height:62px; background:var(--spotify-black);
-      display:flex; align-items: center; box-shadow:0 1px 0 #1112;
-      border-bottom: 1px solid #232323;
-        }
-    .nav-content { width:100%; max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:0 2rem;}
-        .logo {
-      display: flex; align-items: center; font-weight:900; font-size:1.3rem; letter-spacing: -.03em;
-      color: var(--spotify-green);
+    /* ─── NAV ─────────────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 200;
+      height: 66px;
+      background: rgba(13, 13, 13, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-inner {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 2rem;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       text-decoration: none;
-        }
-    .logo img { height:38px; width:38px; margin-right:10px; border-radius: 8px; box-shadow:0 0 12px #1db95411;}
-    .nav-links{display: flex; gap:2rem;}
-        .nav-links a {
-      color:var(--spotify-grey); text-decoration:none; font-weight:600; font-size:1rem;
-      padding:6px 3px; border-radius:3px; transition:color 0.17s, background 0.18s;
-        }
-    .nav-links a:hover, .nav-links a.active {
-      color:var(--spotify-light); background:rgba(29,185,84,0.13);
-        }
-    .nav-cta {
-      margin-left:1.7rem;
-      background: var(--spotify-green);
-      color:var(--spotify-dark); font-weight:900; border:none; border-radius:26px;
-      padding:.8em 2.1em;
-      font-size:1.06rem; letter-spacing:.02em;
-      cursor:pointer; box-shadow:0 4px 20px #1db95426;
-      transition: background 0.22s, color 0.18s, transform 0.16s;
-        }
-    .nav-cta:hover {
-      background: var(--spotify-light); color:var(--spotify-green); transform:scale(1.05);
-    }
-
-    /* General CTA Button Style */
-    .cta-button {
-        display:inline-block; 
-        background: var(--spotify-green);
-        color:var(--spotify-black);
-        font-weight:800; 
-        font-size:1.12rem;
-        border-radius:50px; 
-        padding:1em 2.6em; 
-        border:none; 
-        cursor:pointer;
-        box-shadow:0 6px 26px #1db95425, 0 2px 8px #19141419;
-        transition: background 0.19s, color 0.19s, transform 0.15s;
-        text-decoration: none;
-    }
-
-    .cta-button:hover {
-        background:var(--spotify-light); 
-        color:var(--spotify-green); 
-        transform:scale(1.04) translateY(-2px);
-    }
-
-    /* HERO */
-        .hero {
-      min-height: 98vh; display: flex; flex-direction: column; align-items: center; justify-content: center;
-      text-align:center;
-      z-index:1; position: relative;
-      padding-top: 90px;
-      background: transparent;
-        }
-        .hero h1 {
-      font-size: clamp(2.2rem, 5vw, 4rem);
-      background: linear-gradient(92deg, #1DB954 10%, #39ff8e 40%, #f8f9fa 70%, #1DB954 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-      color: #1DB954; /* fallback */
       font-weight: 900;
-      animation: textGlow 2s infinite alternate;
-      letter-spacing: -1.2px;
-      line-height:1.09;
-      margin-bottom:1.6rem;
-      text-shadow: 0 2px 16px #1db95455, 0 1px 0 #fff;
-        }
-        .hero p {
-      color:var(--spotify-grey); max-width:580px; font-size:1.22rem;
-      line-height:1.7; margin:0 auto 2.7rem;
-        }
-    .hero .cta-button {
-      margin-top:.7rem;
+      font-size: 1.25rem;
+      color: var(--green);
+      letter-spacing: -.02em;
     }
 
-    /* GENERIC SECTION */
-    section { padding: 5.5rem 0 3rem;}
-    .container { max-width:1100px; margin:0 auto; padding:0 1.5rem; position:relative; z-index:1;}
-        .section-title {
-      text-align:center; font-size:2rem; letter-spacing:-1px;
-      margin-bottom:2.1rem; font-weight:800; color:var(--spotify-light);
-        }
+    .logo img {
+      height: 40px;
+      width: auto;
+      border-radius: 8px;
+    }
 
-    /* CARD GRIDS */
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--grey);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: .97rem;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--light);
+    }
+
+    .nav-cta {
+      background: var(--green);
+      color: #000;
+      font-weight: 800;
+      border: none;
+      border-radius: 50px;
+      padding: .65em 1.6em;
+      font-size: .97rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background .2s, transform .15s;
+    }
+
+    .nav-cta:hover {
+      background: #fff;
+      color: var(--green);
+      transform: scale(1.04);
+    }
+
+    /* ─── SHARED ──────────────────────────────────────── */
+    section {
+      padding: 6rem 0 3rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .section-label {
+      display: inline-block;
+      background: var(--green-dim);
+      color: var(--green);
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: .35em .9em;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      color: var(--light);
+      margin-bottom: .75rem;
+    }
+
+    .section-sub {
+      color: var(--grey);
+      font-size: 1.08rem;
+      line-height: 1.7;
+      max-width: 600px;
+    }
+
+    .section-header {
+      margin-bottom: 3rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--green);
+      color: #000;
+      font-weight: 800;
+      font-size: 1rem;
+      border-radius: 50px;
+      padding: .85em 2.2em;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background .2s, transform .15s, color .2s;
+    }
+
+    .btn:hover {
+      background: var(--light);
+      color: var(--green);
+      transform: translateY(-2px) scale(1.03);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: var(--green);
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: 50px;
+      padding: .8em 2em;
+      border: 2px solid var(--green);
+      cursor: pointer;
+      text-decoration: none;
+      transition: background .2s, color .2s, transform .15s;
+    }
+
+    .btn-outline:hover {
+      background: var(--green);
+      color: #000;
+      transform: translateY(-2px);
+    }
+
+    /* ─── HERO ────────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-top: 90px;
+      padding-bottom: 3rem;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      background: var(--green-dim);
+      border: 1px solid #1db95433;
+      color: var(--green);
+      font-size: .85rem;
+      font-weight: 600;
+      padding: .4em 1.1em;
+      border-radius: 50px;
+      margin-bottom: 2rem;
+    }
+
+    .hero-badge span {
+      width: 7px;
+      height: 7px;
+      background: var(--green);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: .4;
+        transform: scale(1.3);
+      }
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+      font-weight: 900;
+      letter-spacing: -2px;
+      line-height: 1.07;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(110deg, #fff 20%, #1DB954 55%, #fff 85%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      background-size: 200% auto;
+      animation: shimmer 5s linear infinite;
+    }
+
+    @keyframes shimmer {
+      0% {
+        background-position: 0% center;
+      }
+
+      100% {
+        background-position: 200% center;
+      }
+    }
+
+    .hero-sub {
+      color: var(--grey);
+      font-size: 1.18rem;
+      line-height: 1.75;
+      max-width: 580px;
+      margin: 0 auto 1.2rem;
+    }
+
+    .hero-metric {
+      display: inline-block;
+      color: var(--green);
+      font-size: 1rem;
+      font-weight: 600;
+      background: var(--green-dim);
+      border: 1px solid #1db95430;
+      padding: .45em 1.2em;
+      border-radius: 50px;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ─── STATS BAR ───────────────────────────────────── */
+    .stats-bar {
+      background: var(--card);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 2.5rem 0;
+    }
+
+    .stats-bar .container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-num {
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--green);
+      letter-spacing: -1px;
+    }
+
+    .stat-label {
+      color: var(--grey);
+      font-size: .9rem;
+      margin-top: .25rem;
+    }
+
+    /* ─── CARDS GRID ──────────────────────────────────── */
     .cards-grid {
-      display:grid; grid-template-columns: repeat(auto-fit, minmax(310px,1fr)); gap:2rem;
-      margin-top:.6rem;
-        }
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
     .card {
-      background: var(--spotify-card);
-      border-radius:20px;
-      box-shadow:0 3px 38px #1db9541a, 0 1.5px 8px #12121210;
-      padding:2.2rem 1.5rem; transition:box-shadow .2s, background .18s, transform .16s;
-      border:1px solid #222;
-      min-height:175px; position:relative; overflow:hidden;
-      filter:drop-shadow(0 1px 2px #19141409);
+      background: var(--card);
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      padding: 2rem 1.7rem;
+      transition: transform .2s, box-shadow .2s, border-color .2s;
     }
+
     .card:hover {
-      background:var(--spotify-card-hover);
-      box-shadow:0 6px 40px #1db95437, 0 2.5px 24px #12121215;
-      transform:translateY(-7px) scale(1.017);
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px #1db95420;
+      border-color: #1db95440;
     }
-    .card .emoji { font-size:2.2rem; margin-bottom:1.2rem;}
-    .card h3 { font-weight:700; color:var(--spotify-light); margin-bottom:.62rem; font-size:1.18rem;}
-    .card p { color:#cfcfcf; font-size:1.04rem; line-height:1.56;}
 
-    /* Portfolio tweaks */
-    .portfolio-grid .card h4 {color:var(--spotify-green);font-size:1.08rem;margin-bottom:0.4rem;}
-    .portfolio-grid .card p{font-size:1.01rem;color: #ececec;}
+    .card-bordered {
+      border-left: 3px solid var(--green);
+      padding-left: 1.5rem;
+    }
 
-        /* Testimonials */
-    .testimonials-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(310px,1fr)); gap:2rem; margin-top:2.2rem;}
+    .card-bordered h3 {
+      font-size: 1.13rem;
+      font-weight: 800;
+      color: var(--light);
+      margin-bottom: .5rem;
+      letter-spacing: -.01em;
+    }
+
+    .card h3 {
+      font-size: 1.12rem;
+      font-weight: 700;
+      margin-bottom: .6rem;
+      color: var(--light);
+    }
+
+    .card p {
+      color: #c0c0c0;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .card-tech {
+      margin-top: .9rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .4rem;
+    }
+
+    .tech-pill {
+      background: var(--green-dim);
+      color: var(--green);
+      font-size: .75rem;
+      font-weight: 600;
+      padding: .25em .7em;
+      border-radius: 50px;
+      border: 1px solid #1db95428;
+    }
+
+    /* ─── ABOUT ───────────────────────────────────────── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-text p {
+      color: var(--grey);
+      line-height: 1.8;
+      font-size: 1.05rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+
+    .about-stat {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem 1.3rem;
+      text-align: center;
+      transition: border-color .2s;
+    }
+
+    .about-stat:hover {
+      border-color: var(--green);
+    }
+
+    .about-stat .num {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--green);
+    }
+
+    .about-stat .lbl {
+      color: var(--grey);
+      font-size: .88rem;
+      margin-top: .3rem;
+      line-height: 1.4;
+    }
+
+    /* ─── SERVICES ────────────────────────────────────── */
+    /* uses .cards-grid + .card above */
+
+    /* ─── CAPABILITIES ──────────────────────────────── */
+    .cap-group {
+      margin-bottom: 2.2rem;
+    }
+
+    .cap-group-title {
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--grey);
+      margin-bottom: .85rem;
+    }
+
+    .cap-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .6rem;
+    }
+
+    .cap-pill {
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--light);
+      font-size: .93rem;
+      font-weight: 600;
+      padding: .5em 1.1em;
+      border-radius: 50px;
+      transition: border-color .2s, color .2s, background .2s;
+    }
+
+    .cap-pill:hover {
+      border-color: var(--green);
+      color: var(--green);
+      background: var(--green-dim);
+    }
+
+    /* ─── PORTFOLIO ─────────────────────────────────── */
+    .portfolio-card {
+      background: var(--card);
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      padding: 2rem 1.7rem;
+      transition: transform .2s, box-shadow .2s, border-color .2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .portfolio-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--green), #39ff8e);
+      opacity: 0;
+      transition: opacity .25s;
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 44px #1db95422;
+      border-color: #1db95440;
+    }
+
+    .portfolio-card:hover::before {
+      opacity: 1;
+    }
+
+    .portfolio-card .industry {
+      display: inline-block;
+      background: var(--green-dim);
+      color: var(--green);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      padding: .3em .8em;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+    }
+
+    .portfolio-card h4 {
+      font-size: 1.13rem;
+      font-weight: 800;
+      color: var(--light);
+      margin-bottom: .6rem;
+    }
+
+    .portfolio-card .prob {
+      color: var(--grey);
+      font-size: .95rem;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .portfolio-metrics {
+      display: flex;
+      gap: .8rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+
+    .metric-badge {
+      background: #0d0d0d;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: .5rem .85rem;
+      text-align: center;
+    }
+
+    .metric-badge .mval {
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: var(--green);
+    }
+
+    .metric-badge .mlbl {
+      font-size: .75rem;
+      color: var(--grey);
+      margin-top: .15rem;
+    }
+
+    /* ─── PROCESS ───────────────────────────────────── */
+    .process-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .process-step {
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 1.5rem;
+      padding-bottom: 2.5rem;
+      position: relative;
+    }
+
+    .process-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 25px;
+      top: 52px;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, var(--green) 0%, transparent 100%);
+      opacity: .25;
+    }
+
+    .step-num {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--green-dim);
+      border: 2px solid var(--green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: 900;
+      color: var(--green);
+      flex-shrink: 0;
+    }
+
+    .step-body h4 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin-bottom: .4rem;
+      padding-top: .75rem;
+    }
+
+    .step-body p {
+      color: var(--grey);
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    /* ─── TESTIMONIALS ──────────────────────────────── */
     .testimonial-card {
-      background: #181818;
-      border-radius:19px;
-      box-shadow: 0 8px 32px #1db95415;
-      padding:2rem 1.3rem 1.27rem;text-align:center; border:1px solid #232323; position:relative;
-        }
-    .testimonial-card:after{ content:'"'; color:#1db95433; font-size:5rem;
-      position:absolute; left:1.7rem; top:0.9rem; opacity:0.19; pointer-events:none;}
-    .testimonial-card .testimonial-text { font-style:italic; color:#d6d6d6; margin-bottom:1.13rem; font-size:1.13rem;}
-    .testimonial-card .testimonial-author { font-weight:700; color: var(--spotify-green);}
-    .testimonial-card .stars { color:var(--spotify-green); font-size:1.22rem;}
-    
-    /* Contact */
-    .contact-section .container { max-width:640px;}
-    .contact-cta {color:var(--spotify-light); font-size:1.12rem; text-align:center; margin-bottom:2.1rem;}
-    .contact-actions { text-align:center;}
-    .contact-actions .cta-button {margin-top:0.5rem;}
-
-    /* FOOTER */
-        footer {
-      background:var(--spotify-black); color:var(--spotify-grey); 
-      text-align:center; padding:2.3rem 0 1.3rem;
-      margin-top:2.4rem; border-top: 3px solid #1db954;
-        }
-    .footer-columns {
-      display:flex; flex-wrap:wrap; justify-content:center; gap:2.3rem 6vw;margin-bottom:1.3rem;
+      background: var(--card);
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      padding: 2rem 1.7rem;
+      position: relative;
+      overflow: hidden;
     }
-    .footer-section h4 { color:var(--spotify-green); margin-bottom:.6rem; font-size:1.06rem; }
-    .footer-section a { color:var(--spotify-green); text-decoration:none; transition:color 0.15s;}
-    .footer-section a:hover {color: var(--spotify-light);}
-    .footer-credit { color:#92a4c7; font-size:.99rem; margin-top:1.9rem;}
-    .footer-logo {height:45px; margin:10px auto 3px; opacity:.97;}
 
-    /* Mobile */
-    @media (max-width:820px){
-      .nav-content {padding:0 1rem;}
-      .cards-grid,.testimonials-grid {grid-template-columns:1fr;}
+    .testimonial-card::before {
+      content: '\201C';
+      position: absolute;
+      top: -10px;
+      left: 1.2rem;
+      font-size: 7rem;
+      color: var(--green);
+      opacity: .08;
+      font-family: Georgia, serif;
+      line-height: 1;
+      pointer-events: none;
     }
-    @media (max-width:620px){
-      nav{height:58px;}
-      .nav-content{flex-direction:column;gap:0.32rem;}
-      .hero{padding-top:76px;}
-      .section-title{font-size:1.27rem;}
-      .logo img{height:31px;width:31px;}
-      .footer-columns {gap:1.2rem 3vw; font-size:.97rem;}
-        }
 
-    /* Animated BG Particles */
-    .bg-animation { position: fixed; z-index: -1; top: 0; left: 0; width:100vw; height:100vh; pointer-events:none; }
-    .particle { position: absolute; width: 3px; height: 3px; border-radius: 50%; opacity: 0.95; animation: float 14s linear infinite; background: #1DB954; }
-    @keyframes float {
+    .testimonial-card:hover {
+      border-color: #1db95440;
+      box-shadow: 0 8px 32px #1db95418;
+    }
+
+    .t-text {
+      font-style: italic;
+      color: #d6d6d6;
+      font-size: 1.06rem;
+      line-height: 1.7;
+      margin-bottom: 1.4rem;
+    }
+
+    .t-author {
+      font-weight: 800;
+      color: var(--green);
+      font-size: 1rem;
+    }
+
+    .t-role {
+      color: var(--grey);
+      font-size: .88rem;
+      margin-top: .2rem;
+    }
+
+    .t-stars {
+      color: var(--green);
+      font-size: 1.1rem;
+      margin-top: .6rem;
+    }
+
+    /* ─── CONTACT ───────────────────────────────────── */
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: .9rem 1.1rem;
+      color: var(--light);
+      font-family: inherit;
+      font-size: .99rem;
+      transition: border-color .2s;
+      outline: none;
+      resize: none;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: var(--green);
+    }
+
+    .contact-form textarea {
+      min-height: 130px;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      color: var(--grey);
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color .2s;
+    }
+
+    .contact-link:hover {
+      color: var(--green);
+    }
+
+    .contact-link .icon {
+      font-size: 1.3rem;
+    }
+
+    /* ─── FOOTER ────────────────────────────────────── */
+    footer {
+      background: var(--dark);
+      border-top: 1px solid var(--border);
+      padding: 3rem 0 1.5rem;
+      margin-top: 4rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-brand .logo {
+      margin-bottom: .8rem;
+      display: inline-flex;
+    }
+
+    .footer-brand p {
+      color: var(--grey);
+      font-size: .9rem;
+      line-height: 1.6;
+      max-width: 260px;
+    }
+
+    .footer-col h5 {
+      color: var(--light);
+      font-weight: 700;
+      margin-bottom: .9rem;
+      font-size: .97rem;
+    }
+
+    .footer-col a {
+      display: block;
+      color: var(--grey);
+      text-decoration: none;
+      font-size: .93rem;
+      margin-bottom: .5rem;
+      transition: color .2s;
+    }
+
+    .footer-col a:hover {
+      color: var(--green);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      text-align: center;
+      color: var(--grey);
+      font-size: .88rem;
+    }
+
+    /* Background particles */
+    .bg-anim {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .particle {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      border-radius: 50%;
+      background: #1DB954;
+      animation: floatUp 14s linear infinite;
+    }
+
+    @keyframes floatUp {
       0% {
         transform: translateY(0);
-                opacity: 0;
-            }
+        opacity: 0;
+      }
+
       10% {
-                opacity: 1;
+        opacity: .7;
       }
+
       90% {
-        opacity: 1;
+        opacity: .5;
       }
+
       100% {
         transform: translateY(-110vh);
         opacity: 0;
       }
     }
-    @keyframes textGlow {
-      0% { filter:brightness(1);}
-      100% { filter:brightness(1.2) drop-shadow(0 0 20px #1db95499);}
-        }
-    </style>
+
+    /* ─── RESPONSIVE ─── */
+    @media(max-width:860px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media(max-width:600px) {
+      .section-title {
+        font-size: 1.6rem;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .stats-bar .container {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <div class="bg-animation" id="bgParticles"></div>
-    <nav>
-    <div class="nav-content">
+  <div class="bg-anim" id="bgParticles"></div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
       <a class="logo" href="#home">
-        <img src="https://placehold.co/40x40/191414/1db954?text=VS" alt="Vanguard Logo"/>
         Vanguard Solutions
       </a>
       <div class="nav-links">
-        <a href="#home" class="active">Home</a>
-        <a href="#services">Offerings</a>
+        <a href="#home">Home</a>
+        <a href="#capabilities">Capabilities</a>
         <a href="#portfolio">Portfolio</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#contact">Contact</a>
-            </div>
-      <a href="#contact" class="nav-cta">Contact Vanguard</a>
-        </div>
-    </nav>
+        <a href="#services">Services</a>
+        <a href="#process">How We Work</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="nav-cta">Book a Call</a>
+      </div>
+    </div>
+  </nav>
 
-  <!-- HERO SECTION -->
-    <section id="home" class="hero">
-    <h1>
-      Transform Your Business<br> with AI & Cloud Computing
-    </h1>
-    <p>
-        We help you overcome complex operational challenges by integrating advanced AI into your existing systems—manual or automated—to enhance speed, intelligence, and cost-efficiency.
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="hero-badge"><span></span> AI & Cloud Solutions Agency</div>
+    <h1>We Build What<br>Your Business Needs.<br>Powered by AI.</h1>
+    <p class="hero-sub">
+      From voice AI and document automation to full cloud migrations — we integrate cutting-edge AI into your existing
+      systems without rebuilding them from scratch.
     </p>
-    <a href="mailto:contact@vanguardsolutions.cloud" class="cta-button">Get Free Demo Today</a>
-    </section>
+    <div class="hero-metric">
+      ✦ Cut processing time from hours to minutes · 40% cost reduction · &lt;600ms AI response latency
+    </div>
+    <div class="hero-actions">
+      <a href="#contact" class="btn">Get a Free Discovery Call</a>
+      <a href="#portfolio" class="btn-outline">See Our Work</a>
+    </div>
+  </section>
 
-  <!-- SERVICES/OFFERINGS -->
-  <section id="services">
-        <div class="container">
-      <h2 class="section-title">Tailored Solutions for Your Business</h2>
-      <div class="cards-grid">
-        <div class="card"><div class="emoji">🤙</div><h3>AI Receptionist</h3><p>Let an AI-powered receptionist answer calls, record client data, and book appointments just like a real person—for dentists, doctors, detailing centers, restaurants, and more.</p></div>
-        <div class="card"><div class="emoji">🤖</div><h3>AI Integration for Websites</h3><p>Add chatbots, recommendation engines, and workflow automation to your website—<br><b>no rebuild required</b>.</p></div>
-        <div class="card"><div class="emoji">📄</div><h3>Document Processing & OCR</h3><p>Automatically turn PDFs and images into data using Azure AI Document Intelligence.</p></div>
-        <div class="card"><div class="emoji">💡</div><h3>Custom AI Solutions</h3><p>Describe your challenge in plain English—we'll build a solution that fits your needs & budget.</p></div>
-        <div class="card"><div class="emoji">🎤</div><h3>Voice-to-Text Solutions</h3><p>Turn voice notes into accurate, timestamped transcripts using advanced models.</p></div>
-        <div class="card"><div class="emoji">⚡</div><h3>Workflow Automations</h3><p>Say goodbye to repetitive manual tasks with automated, error-reducing processes.</p></div>
-        <div class="card"><div class="emoji">☁️</div><h3>Cloud Migration & Support</h3><p>Move to the cloud with confidence, backed by ongoing Vanguard technical support.</p></div>
-            </div>
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stat-item">
+        <div class="stat-num">~10 yrs</div>
+        <div class="stat-label">Combined Team Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">15+</div>
+        <div class="stat-label">Clients Served Globally</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">5</div>
+        <div class="stat-label">Countries Worked In</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">99.9%</div>
+        <div class="stat-label">Uptime on Deployed Systems</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">40%</div>
+        <div class="stat-label">Avg. Cost Reduction</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="section-label">About the Team</div>
+          <h2 class="section-title">Highly Skilled.<br>Deeply Experienced.</h2>
+          <p>We are a lean team of AI and cloud engineers with a combined experience of nearly a decade — hands-on
+            across both the latest AI frontier models and conventional enterprise technology.</p>
+          <p>From HIPAA-compliant healthcare systems deployed on AWS to intelligent document processors built on Azure,
+            our engineers have shipped production systems for clients across the USA, UK, Morocco, and beyond.</p>
+          <p>We don't outsource. We don't over-engineer. We move fast, communicate clearly, and stay invested in your
+            success long after delivery.</p>
         </div>
-    </section>
+        <div class="about-stats">
+          <div class="about-stat">
+            <div class="num">~10 yrs</div>
+            <div class="lbl">Combined Engineering Experience</div>
+          </div>
+          <div class="about-stat">
+            <div class="num">15+</div>
+            <div class="lbl">Projects Delivered Globally</div>
+          </div>
+          <div class="about-stat">
+            <div class="num">5+</div>
+            <div class="lbl">Countries & Industries Served</div>
+          </div>
+          <div class="about-stat">
+            <div class="num">3</div>
+            <div class="lbl">Cloud Platforms Mastered (AWS · Azure · GCP)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section id="process">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Our Process</div>
+        <h2 class="section-title">How We Work</h2>
+        <p class="section-sub">We follow a streamlined, agile process to ensure efficient delivery and measurable
+          results.</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <h3>Discovery & Strategy</h3>
+          <p>We start with a deep dive into your business, understanding your challenges, goals, and existing
+            infrastructure. We then craft a tailored AI strategy.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <h3>Proof of Concept (POC)</h3>
+          <p>Before full-scale development, we build a small, functional prototype to validate the solution's
+            feasibility and demonstrate its potential impact.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <h3>Development & Integration</h3>
+          <p>Our engineers build and integrate the AI solution into your systems, ensuring seamless operation and
+            minimal disruption to your current workflows.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">4</div>
+          <h3>Deployment & Optimization</h3>
+          <p>We deploy the solution, monitor its performance, and continuously optimize it based on real-world data to
+            maximize efficiency and ROI.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">What We Do</div>
+        <h2 class="section-title">Tailored AI Solutions<br>for Your Business</h2>
+        <p class="section-sub">We meet you where you are — whether that's adding AI to an existing system or building
+          something new entirely.</p>
+      </div>
+      <div class="cards-grid">
+        <div class="card card-bordered">
+          <h3>AI Receptionist</h3>
+          <p>Let an AI-powered agent answer calls, record client data, and book appointments 24/7 — indistinguishable
+            from a real person.</p>
+          <div class="card-tech">
+            <span class="tech-pill">AWS Bedrock Nova Sonic</span>
+            <span class="tech-pill">Twilio</span>
+            <span class="tech-pill">Serverless</span>
+          </div>
+        </div>
+        <div class="card card-bordered">
+          <h3>Document Processing & OCR</h3>
+          <p>Automatically extract, classify and structure data from PDFs, images, and scanned forms — turning paper
+            into actionable data.</p>
+          <div class="card-tech">
+            <span class="tech-pill">Azure AI Studio</span>
+            <span class="tech-pill">Custom AI Models</span>
+            <span class="tech-pill">Python</span>
+          </div>
+        </div>
+        <div class="card card-bordered">
+          <h3>Voice AI & Transcription</h3>
+          <p>Turn audio recordings into accurate, word-level timestamped transcripts. Deploy custom voice agents with
+            sub-second latency.</p>
+          <div class="card-tech">
+            <span class="tech-pill">AWS SageMaker</span>
+            <span class="tech-pill">NVIDIA NeMo</span>
+            <span class="tech-pill">Whisper</span>
+          </div>
+        </div>
+        <div class="card card-bordered">
+          <h3>Workflow Automation</h3>
+          <p>Eliminate repetitive manual tasks with intelligent automation pipelines that connect your tools, databases,
+            and APIs seamlessly.</p>
+          <div class="card-tech">
+            <span class="tech-pill">n8n</span>
+            <span class="tech-pill">MCP Server</span>
+            <span class="tech-pill">Make.com</span>
+          </div>
+        </div>
+        <div class="card card-bordered">
+          <h3>Cloud Migration & DevOps</h3>
+          <p>Move to the cloud with zero downtime. We architect scalable, cost-optimized infrastructure with ongoing
+            support included.</p>
+          <div class="card-tech">
+            <span class="tech-pill">AWS</span>
+            <span class="tech-pill">Azure</span>
+            <span class="tech-pill">Docker</span>
+            <span class="tech-pill">Terraform</span>
+          </div>
+        </div>
+        <div class="card card-bordered">
+          <h3>Custom AI Solutions</h3>
+          <p>Describe your challenge in plain English. We'll scope, build, and deploy a bespoke AI solution that fits
+            your budget and timeline.</p>
+          <div class="card-tech">
+            <span class="tech-pill">DeepSeek R1</span>
+            <span class="tech-pill">AWS Bedrock</span>
+            <span class="tech-pill">FastAPI</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CAPABILITIES -->
+  <section id="capabilities">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Tech Stack</div>
+        <h2 class="section-title">Our Capabilities</h2>
+        <p class="section-sub">We work with both cutting-edge frontier AI and proven enterprise infrastructure — giving
+          you the best of both worlds.</p>
+      </div>
+      <div class="cap-group">
+        <div class="cap-group-title">Cloud Platforms</div>
+        <div class="cap-pills">
+          <span class="cap-pill">AWS</span>
+          <span class="cap-pill">Microsoft Azure</span>
+          <span class="cap-pill">Google Cloud (GCP)</span>
+          <span class="cap-pill">Railway Cloud</span>
+          <span class="cap-pill">Serverless</span>
+        </div>
+      </div>
+      <div class="cap-group">
+        <div class="cap-group-title">AI / LLM Models</div>
+        <div class="cap-pills">
+          <span class="cap-pill">OpenAI GPT-4o</span>
+          <span class="cap-pill">Claude (Anthropic)</span>
+          <span class="cap-pill">AWS Bedrock Nova Sonic</span>
+          <span class="cap-pill">DeepSeek R1</span>
+          <span class="cap-pill">Llama</span>
+          <span class="cap-pill">NVIDIA NeMo</span>
+          <span class="cap-pill">Sentence Transformers</span>
+          <span class="cap-pill">Vector Databases</span>
+        </div>
+      </div>
+      <div class="cap-group">
+        <div class="cap-group-title">Automation &amp; Integration</div>
+        <div class="cap-pills">
+          <span class="cap-pill">n8n</span>
+          <span class="cap-pill">MCP Server</span>
+          <span class="cap-pill">Make.com</span>
+          <span class="cap-pill">Monday.com</span>
+          <span class="cap-pill">LangChain</span>
+          <span class="cap-pill">FastAPI</span>
+        </div>
+      </div>
+      <div class="cap-group">
+        <div class="cap-group-title">DevOps &amp; Infrastructure</div>
+        <div class="cap-pills">
+          <span class="cap-pill">Docker</span>
+          <span class="cap-pill">Kubernetes</span>
+          <span class="cap-pill">Terraform</span>
+          <span class="cap-pill">AWS Lambda</span>
+          <span class="cap-pill">AWS Fargate</span>
+          <span class="cap-pill">AWS SageMaker</span>
+          <span class="cap-pill">Azure AI Studio</span>
+          <span class="cap-pill">CI/CD</span>
+          <span class="cap-pill">Git</span>
+        </div>
+      </div>
+      <div class="cap-group">
+        <div class="cap-group-title">Languages &amp; Data</div>
+        <div class="cap-pills">
+          <span class="cap-pill">Python</span>
+          <span class="cap-pill">Node.js</span>
+          <span class="cap-pill">JavaScript</span>
+          <span class="cap-pill">SQL</span>
+          <span class="cap-pill">PostgreSQL</span>
+          <span class="cap-pill">Apache Spark</span>
+          <span class="cap-pill">Tableau</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- PORTFOLIO -->
   <section id="portfolio">
-        <div class="container">
-      <h2 class="section-title">Recent Success Stories</h2>
-      <div class="cards-grid portfolio-grid">
-        <div class="card">
-          <h4>AI Chatbots for Existing Sites</h4>
-          <p>Added Gen AI bots and API connections to client workflows, boosting engagement by 60%—no system rebuild needed.</p>
-                </div>
-        <div class="card">
-          <h4>Document Processing – Nissi Distribution</h4>
-          <p>Automated scanning & extraction of 1,500+ shipment docs per day, converting PDFs to Excel, speeding up ops drastically.</p>
-                </div>
-        <div class="card">
-          <h4>Voice Transcription – Moroccan Company</h4>
-          <p>Built AWS+NVIDIA solution for accurate, timestamped transcripts, improving communication and workflow efficiency.</p>
-        </div>
-        <div class="card">
-          <h4>Automation for Multiple Firms</h4>
-          <p>Custom automations eliminated manual workloads and errors, cutting processing time by up to 70%.</p>
-                </div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Case Studies</div>
+        <h2 class="section-title">Real Projects.<br>Measurable Results.</h2>
+        <p class="section-sub">Every project we ship is measured by the impact it creates — in time saved, costs
+          reduced, and processes transformed.</p>
+      </div>
+      <div class="cards-grid">
+        <div class="portfolio-card">
+          <div class="industry">Healthcare · USA</div>
+          <h4>HIPAA-Compliant AI Receptionist</h4>
+          <p class="prob">A dental clinic needed 24/7 patient call handling without adding headcount — and with strict
+            HIPAA data compliance.</p>
+          <div class="portfolio-metrics">
+            <div class="metric-badge">
+              <div class="mval">&lt;600ms</div>
+              <div class="mlbl">AI Response Latency</div>
             </div>
+            <div class="metric-badge">
+              <div class="mval">99.9%</div>
+              <div class="mlbl">System Uptime</div>
+            </div>
+            <div class="metric-badge">
+              <div class="mval">24/7</div>
+              <div class="mlbl">Call Coverage</div>
+            </div>
+          </div>
+          <div class="card-tech">
+            <span class="tech-pill">AWS Bedrock Nova Sonic</span>
+            <span class="tech-pill">Twilio</span>
+            <span class="tech-pill">Serverless</span>
+            <span class="tech-pill">HIPAA Compliant</span>
+          </div>
         </div>
-    </section>
+        <div class="portfolio-card">
+          <div class="industry">Logistics & Distribution · USA</div>
+          <h4>Intelligent Document Processing — Nissi Distribution</h4>
+          <p class="prob">500+ inconsistently formatted printed shipment sheets needed to be digitized daily. Manual
+            entry was taking hours and causing errors.</p>
+          <div class="portfolio-metrics">
+            <div class="metric-badge">
+              <div class="mval">500+</div>
+              <div class="mlbl">Docs Processed / Day</div>
+            </div>
+            <div class="metric-badge">
+              <div class="mval">Hours→Min</div>
+              <div class="mlbl">Processing Time</div>
+            </div>
+          </div>
+          <div class="card-tech">
+            <span class="tech-pill">Azure AI Studio</span>
+            <span class="tech-pill">Custom AI Models</span>
+            <span class="tech-pill">Python</span>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <div class="industry">Media & Communications · Morocco</div>
+          <h4>AWS Speech Alignment System</h4>
+          <p class="prob">A Morocco-based media company needed precise, word-level timestamped transcriptions from
+            long-form audio recordings at scale.</p>
+          <div class="portfolio-metrics">
+            <div class="metric-badge">
+              <div class="mval">Word-level</div>
+              <div class="mlbl">Timestamp Precision</div>
+            </div>
+            <div class="metric-badge">
+              <div class="mval">↓ Latency</div>
+              <div class="mlbl">Via Provisioned Concurrency</div>
+            </div>
+          </div>
+          <div class="card-tech">
+            <span class="tech-pill">AWS SageMaker</span>
+            <span class="tech-pill">NVIDIA NeMo Aligner</span>
+            <span class="tech-pill">API Gateway</span>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <div class="industry">Education Technology · UK</div>
+          <h4>AWS Rekognition Intelligent Crop Service</h4>
+          <p class="prob">A UK EdTech company had to manually process 30,000–40,000 student photos annually for ID
+            documents — slow, expensive, and error-prone.</p>
+          <div class="portfolio-metrics">
+            <div class="metric-badge">
+              <div class="mval">40%</div>
+              <div class="mlbl">Cost Reduction vs EC2</div>
+            </div>
+            <div class="metric-badge">
+              <div class="mval">40k+</div>
+              <div class="mlbl">Photos Processed / Year</div>
+            </div>
+          </div>
+          <div class="card-tech">
+            <span class="tech-pill">AWS Lambda</span>
+            <span class="tech-pill">AWS Rekognition</span>
+            <span class="tech-pill">JavaScript</span>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <div class="industry">HR & Recruitment · Canada</div>
+          <h4>AI Resume Scoring & Matching Engine</h4>
+          <p class="prob">A recruitment platform needed to rank and score hundreds of resumes against job descriptions
+            accurately and at speed.</p>
+          <div class="portfolio-metrics">
+            <div class="metric-badge">
+              <div class="mval">Hybrid AI</div>
+              <div class="mlbl">Semantic + Rules Engine</div>
+            </div>
+            <div class="metric-badge">
+              <div class="mval">Scalable</div>
+              <div class="mlbl">AWS Bedrock Backend</div>
+            </div>
+          </div>
+          <div class="card-tech">
+            <span class="tech-pill">AWS Bedrock</span>
+            <span class="tech-pill">DeepSeek R1</span>
+            <span class="tech-pill">FastAPI</span>
+            <span class="tech-pill">Sentence Transformers</span>
+          </div>
+        </div>
+        <div class="portfolio-card">
+          <div class="industry">SaaS & Project Management · USA</div>
+          <h4>Monday.com MCP Integration via n8n</h4>
+          <p class="prob">A US-based SaaS company needed their Monday.com project data to automatically trigger n8n
+            workflows — eliminating manual syncing entirely.</p>
+          <div class="portfolio-metrics">
+            <div class="metric-badge">
+              <div class="mval">Zero</div>
+              <div class="mlbl">Manual Sync Required</div>
+            </div>
+            <div class="metric-badge">
+              <div class="mval">Real-time</div>
+              <div class="mlbl">Workflow Triggers</div>
+            </div>
+          </div>
+          <div class="card-tech">
+            <span class="tech-pill">MCP Server</span>
+            <span class="tech-pill">n8n</span>
+            <span class="tech-pill">Monday.com API</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE WORK -->
+  <section id="process">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Our Process</div>
+        <h2 class="section-title">How We Work</h2>
+        <p class="section-sub">We follow a clear, transparent process — keeping you in the loop at every stage and never
+          disappearing after delivery.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:start;">
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-num">1</div>
+            <div class="step-body">
+              <h4>Discovery Call</h4>
+              <p>We start by listening. Tell us your challenge in plain words — no tech jargon needed. We'll ask the
+                right questions to understand your operations, goals, and constraints.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-num">2</div>
+            <div class="step-body">
+              <h4>Scoping & Proposal</h4>
+              <p>We document the exact solution, timeline, and pricing — no surprises. You approve the scope before we
+                write a single line of code.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-num">3</div>
+            <div class="step-body">
+              <h4>Build & Iterate</h4>
+              <p>We work in sprints with regular check-ins. You see progress early and often — and your feedback shapes
+                the final product, not just the launch version.</p>
+            </div>
+          </div>
+        </div>
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-num">4</div>
+            <div class="step-body">
+              <h4>Deploy & Handoff</h4>
+              <p>We handle the full deployment and provide clear documentation and training. You own what we build — not
+                a black box you can't touch.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-num">5</div>
+            <div class="step-body">
+              <h4>Ongoing Support & Feedback Loop</h4>
+              <p>We stay in touch. Post-launch, we monitor performance, collect your feedback, and iterate. Our clients
+                don't feel abandoned — they feel partnered.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- TESTIMONIALS -->
   <section id="testimonials">
-        <div class="container">
-            <h2 class="section-title">What Our Clients Say</h2>
-      <div class="testimonials-grid">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Client Reviews</div>
+        <h2 class="section-title">What Our Clients Say</h2>
+      </div>
+      <div class="cards-grid">
         <div class="testimonial-card">
-          <div class="testimonial-text">After this project, I now want to use Azure for other projects so Saad(at vanguard) can produce another masterpiece for me. Prompt, good value, quality customer service, high level.</div>
-          <div class="testimonial-author">— Austin Hill, Nissi Distribution</div>
-          <div class="stars">★★★★★</div>
-                </div>
-        <div class="testimonial-card">
-          <div class="testimonial-text">Quick and thorough in response. Great to work with! Excellent documentation. Quality of delivery and value—everything was perfect.</div>
-          <div class="testimonial-author">— William Wong, Fiverr Pro Product Owner</div>
-          <div class="stars">★★★★★</div>
-                </div>
-        <div class="testimonial-card">
-          <div class="testimonial-text">Vanguard Solutions made our complex automation simple. Their affordable pricing and ongoing tech support exceeded our expectations.</div>
-          <div class="testimonial-author">— Sarah M., Operations Manager</div>
-          <div class="stars">★★★★★</div>
-                </div>
-            </div>
+          <div class="t-text">"After this project, I now want to use Azure for other projects so Saad (at Vanguard) can
+            produce another masterpiece for me. Prompt, good value, quality customer service, high level."</div>
+          <div class="t-author">Austin Hill</div>
+          <div class="t-role">Nissi Fulfillment & Distribution — Ohio, USA</div>
+          <div class="t-stars">★★★★★</div>
         </div>
-    </section>
+        <div class="testimonial-card">
+          <div class="t-text">"Quick and thorough in response. Great to work with! Excellent documentation. Quality of
+            delivery and value — everything was perfect."</div>
+          <div class="t-author">William Wong</div>
+          <div class="t-role">Product Owner — Fiverr Pro Client</div>
+          <div class="t-stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">Let's Start Your Transformation</h2>
-      <div class="contact-cta">
-        Ready to make your business more efficient? Tell us your challenge in simple words—<b>we'll handle the tech</b> and deliver fast, affordable solutions with ongoing support.
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Get In Touch</div>
+        <h2 class="section-title">Let's Start Your<br>Transformation</h2>
+        <p class="section-sub">Tell us your challenge. We'll handle the tech, the timeline, and the delivery — fast and
+          affordably.</p>
       </div>
-      <div class="contact-actions">
-        <a href="mailto:contact@vanguardsolutions.cloud" class="cta-button">Let's Do This!</a>
+      <div class="contact-wrap">
+        <form class="contact-form" action="mailto:contact@vanguardsolutions.cloud" method="post" enctype="text/plain">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="text" name="company" placeholder="Company / Industry">
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Describe your challenge or what you need built..." required></textarea>
+          <button type="submit" class="btn" style="width:100%;text-align:center;">Send Message →</button>
+        </form>
+        <div>
+          <p style="color:var(--grey);line-height:1.8;font-size:1.02rem;margin-bottom:1.5rem;">Prefer to reach out
+            directly? We're available via email and LinkedIn. We typically respond within a few hours.</p>
+          <div class="contact-links">
+            <a href="mailto:contact@vanguardsolutions.cloud" class="contact-link">
+              <span class="icon">✉️</span> contact@vanguardsolutions.cloud
+            </a>
+            <a href="https://www.linkedin.com/company/110533088" target="_blank" rel="noopener" class="contact-link">
+              <span class="icon">🔗</span> LinkedIn — Vanguard Solutions
+            </a>
+          </div>
+          <div
+            style="margin-top:2rem;padding:1.5rem;background:var(--card);border-radius:16px;border:1px solid var(--border);">
+            <div style="color:var(--green);font-weight:800;font-size:1.05rem;margin-bottom:.5rem;">✦ Free Discovery Call
             </div>
+            <p style="color:var(--grey);font-size:.95rem;line-height:1.6;">Not sure where to start? Book a free
+              30-minute call. No commitment, no pitch — just honest advice on what AI can do for your business.</p>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
   <!-- FOOTER -->
-    <footer>
-        <div class="container">
-      <div class="footer-columns">
-        <div class="footer-section">
-                    <h4>Contact Info</h4>
-          <p>Email: <a href="mailto:contact@vanguardsolutions.cloud" style="color:var(--main-light)">contact@vanguardsolutions.cloud</a></p>
-          <p style="margin-top:.7em;">Fast • Efficient • Affordable</p>
-          <div>Ongoing Tech Support Included</div>
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <a class="logo" href="#home">
+            Vanguard Solutions
+          </a>
+          <p style="margin-top:.8rem;">Fast · Efficient · Affordable<br>AI & Cloud solutions for forward-thinking
+            businesses.</p>
+          <p style="margin-top:.6rem;color:var(--grey);font-size:.85rem;">Ongoing Tech Support Included with every
+            project.</p>
         </div>
-        <div class="footer-section">
-          <h4>Socials</h4>
-          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-                </div>
-            </div>
-      <div>
-        <img src="https://placehold.co/120x44/191414/1db954?text=VS" class="footer-logo" alt="Vanguard Solutions Logo"/>
-        <div class="footer-credit">&copy; 2025 Vanguard Solutions. All rights reserved.</div>
-            </div>
+        <div class="footer-col">
+          <h5>Services</h5>
+          <a href="#services">AI Receptionist</a>
+          <a href="#services">Document Processing</a>
+          <a href="#services">Voice AI</a>
+          <a href="#services">Workflow Automation</a>
+          <a href="#services">Cloud Migration</a>
+          <a href="#services">Custom AI Solutions</a>
         </div>
-    </footer>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="#about">About the Team</a>
+          <a href="#portfolio">Case Studies</a>
+          <a href="#process">How We Work</a>
+          <a href="#testimonials">Client Reviews</a>
+        </div>
+        <div class="footer-col">
+          <h5>Connect</h5>
+          <a href="mailto:contact@vanguardsolutions.cloud">contact@vanguardsolutions.cloud</a>
+          <a href="https://www.linkedin.com/company/110533088" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/saadhaniftaj" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © 2025 Vanguard Solutions. All rights reserved.
+      </div>
+    </div>
+  </footer>
 
-    <script>
-    // Dynamic BG particles
-    const $bg=document.getElementById('bgParticles'); 
-    // Tiny green particles
-    for(let i=0;i<300;i++){
-      const d = document.createElement('div');
-      d.className='particle';
-      d.style.left=Math.random()*100+'vw';
-      d.style.top=Math.random()*100+'vh';
-      d.style.animationDuration=(7+Math.random()*10)+'s';
-      d.style.opacity = Math.random() * 0.3 + 0.7;
-      $bg.appendChild(d);
+  <script>
+    // Particles
+    const bg = document.getElementById('bgParticles');
+    for (let i = 0; i < 200; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      p.style.left = Math.random() * 100 + 'vw';
+      p.style.top = Math.random() * 100 + 'vh';
+      p.style.animationDuration = (8 + Math.random() * 10) + 's';
+      p.style.animationDelay = (Math.random() * 10) + 's';
+      p.style.opacity = Math.random() * 0.4 + 0.1;
+      bg.appendChild(p);
+    }
+    // Nav active link highlight on scroll
+    const sections = document.querySelectorAll('section[id], div.stats-bar');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navLinks.forEach(a => {
+            a.style.color = a.getAttribute('href') === '#' + e.target.id ? '#fff' : '';
+          });
         }
-    </script>
+      });
+    }, { threshold: 0.4 });
+    document.querySelectorAll('section[id]').forEach(s => observer.observe(s));
+  </script>
 </body>
+
 </html>
