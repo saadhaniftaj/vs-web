@@ -93,10 +93,19 @@
       width: 100%;
       max-width: 1200px;
       margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
       align-items: center;
       padding: 0 2rem;
+    }
+
+    .nav-inner .nav-links {
+      justify-content: center;
+    }
+
+    .nav-inner .nav-cta-wrap {
+      display: flex;
+      justify-content: flex-end;
     }
 
     .logo {
@@ -136,7 +145,7 @@
 
     .nav-cta {
       background: var(--green);
-      color: #000;
+      color: #000 !important;
       font-weight: 800;
       border: none;
       border-radius: 50px;
@@ -144,12 +153,14 @@
       font-size: .97rem;
       cursor: pointer;
       text-decoration: none;
+      position: relative;
+      overflow: hidden;
       transition: background .2s, transform .15s;
     }
 
     .nav-cta:hover {
-      background: #fff;
-      color: var(--green);
+      background: #25d966;
+      color: #000 !important;
       transform: scale(1.04);
     }
 
@@ -198,6 +209,60 @@
       margin-bottom: 3rem;
     }
 
+    /* ─── BUTTONS WITH SHINE ─── */
+    .btn,
+    .btn-outline,
+    .nav-cta {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn::after,
+    .btn-outline::after,
+    .nav-cta::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -75%;
+      width: 50%;
+      height: 200%;
+      background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.38) 50%, transparent 100%);
+      transform: skewX(-20deg);
+      transition: none;
+      pointer-events: none;
+      animation: btnShine 3.5s ease-in-out infinite;
+    }
+
+    .btn-outline::after {
+      background: linear-gradient(120deg, transparent 0%, rgba(29, 185, 84, 0.22) 50%, transparent 100%);
+      animation-delay: 1.2s;
+    }
+
+    .nav-cta::after {
+      animation-delay: 0.6s;
+    }
+
+    @keyframes btnShine {
+      0% {
+        left: -75%;
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 1;
+      }
+
+      40% {
+        left: 125%;
+        opacity: 0;
+      }
+
+      100% {
+        left: 125%;
+        opacity: 0;
+      }
+    }
+
     .btn {
       display: inline-block;
       background: var(--green);
@@ -213,8 +278,8 @@
     }
 
     .btn:hover {
-      background: var(--light);
-      color: var(--green);
+      background: #25d966;
+      color: #000;
       transform: translateY(-2px) scale(1.03);
     }
 
@@ -916,6 +981,8 @@
         <a href="#services">Services</a>
         <a href="#process">How We Work</a>
         <a href="#about">About</a>
+      </div>
+      <div class="nav-cta-wrap">
         <a href="#contact" class="nav-cta">Book a Call</a>
       </div>
     </div>
