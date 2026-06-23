@@ -177,6 +177,20 @@ p {
 }
 .logo-mark svg { width: 18px; height: 18px; }
 
+.hamburger {
+  display: none;
+  cursor: pointer;
+  color: var(--text-main);
+}
+.hamburger svg {
+  width: 28px;
+  height: 28px;
+}
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -472,4 +486,74 @@ section {
   color: var(--text-main);
   text-decoration: none;
   font-weight: 600;
+}
+
+/* ─── Media Queries ────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .nav-menu {
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: rgba(235, 235, 235, 0.95);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    transform: translateY(-150%);
+    opacity: 0;
+    transition: var(--transition);
+    pointer-events: none;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+  .nav-menu.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    width: 100%;
+  }
+  .nav-menu .btn {
+    width: 100%;
+    text-align: center;
+  }
+  .hero {
+    min-height: 80vh;
+    padding-top: 80px;
+  }
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  .hero p {
+    font-size: 1.05rem;
+  }
+  .stats-bar {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+  .process-step {
+    grid-template-columns: 50px 1fr;
+    gap: 1.5rem;
+  }
+  .process-step:not(:last-child)::after {
+    left: 24px;
+    top: 50px;
+  }
+  .step-num {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+  .container {
+    padding: 0 1.5rem;
+  }
 }
