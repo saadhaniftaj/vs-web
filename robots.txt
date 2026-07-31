@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+# Explicitly allow AI crawlers for AEO (Answer Engine Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Sitemap would go here
+# Sitemap: https://vanguardarc.com/sitemap.xml

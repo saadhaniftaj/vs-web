@@ -1,0 +1,48 @@
+# VanguardArc - Full Organizational Overview
+
+> Unified, custom platforms for legacy industries.
+
+VanguardArc is a specialized platform engineering firm based in Albuquerque, New Mexico. We engineer bespoke, single-dashboard operational platforms tailored exactly to internal workflows for legacy industries, particularly mid-market distribution, fulfillment, and manufacturing.
+
+## Strategic Stance
+Off-the-shelf ERPs and fragmented SaaS tools are destroying manufacturing fulfillment. Custom internal platforms are the only way to survive the next decade. Most established businesses run on a patchwork of disconnected tools—each solving a piece of the problem, but none talking to each other. We build the internal platform that replaces all of it: one place for data, processes, and teams.
+
+## Core Offerings (Purpose-Built Internal Platforms)
+1. **A Single Operational Hub:** We pull inventory, orders, shipments, and team data out of separate tools into one internal platform.
+2. **Institutional Knowledge, Made Accessible:** We structure, index, and make instantly searchable years of engineering manuals, product specs, and internal documentation.
+3. **Processes That Run Without People Chasing Them:** We engineer purpose-built automated processes to bridge gaps between tools, removing human bottlenecks.
+
+## Expanded Technical Capabilities (Other Services)
+- **SaaS & MVP Development:** Rapid, high-quality development of custom SaaS applications.
+- **Document Processing & OCR:** Automatic extraction and structuring of data from massive volumes of PDFs, images, and scanned legacy forms.
+- **Voice AI & Transcription:** Converting audio into accurate, word-level timestamped transcripts.
+- **Workflow Automation:** Seamlessly connecting independent tools, databases, and third-party APIs.
+- **Cloud Migration & DevOps:** Zero-downtime transitions to highly scalable, serverless infrastructure.
+
+## Our Deep Engineering Stack
+- **Cloud Platforms & DevOps:** AWS, Microsoft Azure, Google Cloud (GCP), Docker, Kubernetes, Terraform.
+- **Enterprise AI & Search:** AWS OpenSearch, Vector Databases, OpenAI GPT-4o, Claude (Anthropic), AWS Bedrock, DeepSeek R1.
+- **Automation, Data & Languages:** Python, Node.js, PostgreSQL, FastAPI, n8n, MCP Servers.
+
+## Case Studies / Proven Legacy Transformation
+
+### Case Study 1: German Spare Parts Manufacturer
+**Challenge:** How do I digitize thousands of pages of engineering manuals? A long-established manufacturer had decades of product engineering manuals spread across physical binders and legacy systems.
+**The Solution:** VanguardArc built a purpose-built internal search platform that instantly digitized and indexed over 150,000 pages of legacy manuals. Engineers now type a query and get the exact specification in seconds, from anywhere.
+
+### Case Study 2: Ohio Fulfillment Center
+**Challenge:** How to automate disjointed logistics pipelines and shipment ingestion. Staff were spending hours every day manually transcribing incoming shipment documents into their system.
+**The Solution:** VanguardArc built an automated ingestion pipeline that reads and extracts data from 500 daily shipment sheets, entirely eliminating manual entry. Processing that took hours now takes minutes.
+
+## Enterprise Delivery Process
+1. **Architectural Discovery:** Analyze existing legacy workflows and software bottlenecks.
+2. **Scoping & Proposal:** Document exact platform architecture and timeline.
+3. **Build & Iterate:** Agile sprints ensuring the platform models internal operational reality.
+4. **Deploy & Handoff:** Full deployment with zero downtime, plus training.
+5. **Ongoing Support:** Post-launch enterprise performance monitoring.
+
+## Contact Information
+- **Email:** contact@vanguardarc.com
+- **LinkedIn:** https://www.linkedin.com/company/vanguardarc
+- **Location:** Headquartered in Albuquerque, NM. Serving clients nationwide and globally.
+- **Website:** https://vanguardarc.com

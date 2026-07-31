@@ -1,0 +1,19 @@
+# VanguardArc
+
+> Unified, custom platforms for legacy industries.
+
+VanguardArc is an Albuquerque, NM-based enterprise software engineering firm specialized in replacing fragmented SaaS bloat with custom, unified operational dashboards for mid-market distribution, manufacturing, and fulfillment centers.
+
+## Core Offerings
+- **Unified Operations Dashboards:** Replacing disjointed SaaS with a single operational hub.
+- **Legacy Knowledge Modernization:** Digitizing and indexing unstructured legacy manuals.
+- **Workflow Consolidation:** Building custom data pipelines to eliminate manual data entry.
+
+## Target Audience
+Mid-market manufacturing, distribution, and fulfillment companies struggling with off-the-shelf ERPs and disconnected tools.
+
+## Contact
+Email: contact@vanguardarc.com
+LinkedIn: https://www.linkedin.com/company/vanguardarc
+Location: Albuquerque, NM (Serving Nationwide/Globally)
+Website: https://vanguardarc.com
