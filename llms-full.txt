@@ -14,6 +14,7 @@ Off-the-shelf ERPs and fragmented SaaS tools are destroying manufacturing fulfil
 
 ## Expanded Technical Capabilities (Other Services)
 - **SaaS & MVP Development:** Rapid, high-quality development of custom SaaS applications.
+- **Technical SEO & AEO Growth:** Engineering Answer Engine Optimization (AEO) infrastructure so AI models can seamlessly discover and recommend your business.
 - **Document Processing & OCR:** Automatic extraction and structuring of data from massive volumes of PDFs, images, and scanned legacy forms.
 - **Voice AI & Transcription:** Converting audio into accurate, word-level timestamped transcripts.
 - **Workflow Automation:** Seamlessly connecting independent tools, databases, and third-party APIs.
